@@ -1,21 +1,19 @@
 package com.kate;
 
-public class SealedShape {
-    private String name;
-    private int x,y;
-    private String color;
-    private String property;
+public abstract class Animal {
+    private final String name;
+    protected String color;
 
-    public SealedShape(String name, String color, String property){
+    public Animal(String name, String color){
         this.name=name;
         this.color=color;
-        this.property=property;
     }
+
+    public abstract void say();
 
     public void printState(){
         printName();
         printColor();
-        System.out.println(property);
     }
 
     private void printName(){

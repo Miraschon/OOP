@@ -5,17 +5,25 @@ package com.kate;
  */
 public class App {
     public static void main(String[] args) {
-       playShape();
+        App app=new App();
+        app.playShape();
     }
 
-    public static void playShape() {
-        SealedShape triangle = new SealedShape("triangle", "blue", "word");
-        Shape circle = new Shape();
-        circle.setName("circle");
-        circle.setColor("red");
-        circle.setProperty("word");
-        triangle.printState();
-        circle.printState();
+    public void playShape() {
 
+        Dog dog=new Dog("Spot","brown");
+        dog.say();
+        dog.printState();
+        dog.setColor("green");
+        dog.printState();
+        Cat cat=new Cat("Zuma","brown");
+        cat.say();
+        cat.printState();
+
+     /*   Singleton singleton=Singleton.create();
+        singleton.setWord("word1");
+        System.out.println(singleton.getWord());
+        Singleton singleton2=Singleton.create();
+        System.out.println(singleton2.getWord());*/
     }
 }
